@@ -2,11 +2,6 @@
 services:
   - type: web
     name: bfhl-backend
-    env: java
-    buildCommand: "mvn -B clean package --skipTests"
-    startCommand: "java -jar target/*.jar"
+    env: docker
     healthCheckPath: "/bfhl"
     autoDeploy: true
-    envVars:
-      - key: JAVA_VERSION
-        value: 21
